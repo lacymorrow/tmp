@@ -112,7 +112,7 @@ section {
 
 .theme.is-dark .bg:before {
   background-color: rgb(var(--twlo-blue-100));
-  width: 35%;
+  
 }
 
 .theme.is-red {

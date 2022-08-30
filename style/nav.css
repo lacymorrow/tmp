@@ -194,7 +194,6 @@
   opacity: 0;
   transform: translateY(2rem) rotate(3deg);
   position: relative;
-  white-space: nowrap;
 }
 
 .nav.is-open .menu-item {

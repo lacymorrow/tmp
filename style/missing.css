@@ -2,7 +2,7 @@
   0% { opacity: 0; }
 }
 
-.section-whatis {
+.section-missing {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 1fr;
@@ -17,44 +17,43 @@
   --venn-size: 30vw;
 }
   
-.whatis-left { 
+.missing-left { 
   grid-area: 1 / 1 / 2 / 2; 
-  padding: 25%;
-  /* background: linear-gradient(130deg, rgba(var(--twlo-red-10), 1), rgba(var(--twlo-red-10), 1)); */
+  padding: 10%;
 }
 
-.whatis-right { 
+.missing-right { 
   grid-area: 1 / 2 / 2 / 3; 
   display: flex;
   flex-direction: column;
 }
 
-.whatis-title {
+.missing-title {
   color: rgb(var(--twlo-red));
   font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
   font-size: 6vmax;
   /* Negative text indent to optically left-align the capital T */
   /* text-indent: -1rem; */
-  white-space: nowrap;
 }
 
-.whatis-sub-title {
+.missing-sub-title {
   font-size: 2vmax;
   max-width: 50ch;
   line-height: 1.6;
+  color: black;
 }
 
 /* ==================== */
 /* Magic Venn */
 /* ==================== */
 
-.whatis-venn {
+.missing-venn {
   width: var(--venn-size);
   height: var(--venn-size);
   position: relative;
 }
 
-.whatis-venn-circle {
+.missing-venn-circle {
   box-sizing: content-box;
   width: calc(var(--venn-size) * 0.63);
   height: calc(var(--venn-size) * 0.63);
@@ -62,7 +61,7 @@
   border: 10px solid rgb(var(--twlo-red));
 }
 
-.whatis-venn-circle::after {
+.missing-venn-circle::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -77,12 +76,12 @@
   transition: opacity 300ms ease-in;
 }
 
-:not(.has-no-hover).whatis-venn-circle:hover::after,
-.whatis-venn-circle.is-dotted::after {
+:not(.has-no-hover).missing-venn-circle:hover::after,
+.missing-venn-circle.is-dotted::after {
   opacity: 0.25;
 }
 
-.whatis-link {
+.missing-link {
   z-index: 2;
   color: inherit;
   text-align: center;
@@ -90,63 +89,63 @@
   margin-top: 2rem;
 }
 
-.whatis-venn-circle .hero-link {
+.missing-venn-circle .hero-link {
   margin-top: 0;
 }
 
-.whatis-venn .hero-link {
+.missing-venn .hero-link {
   position: absolute;
 }
 
-.whatis-venn .hero-link strong {
+.missing-venn .hero-link strong {
   display: block;
   font-weight: 900;
 }
 
-.whatis-venn-top-left {
+.missing-venn-top-left {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 4;
 }
 
-.whatis-venn-top-left .hero-link {
+.missing-venn-top-left .hero-link {
   top: 20%;
   left: 20%;
 }
 
-.whatis-venn-top-right {
+.missing-venn-top-right {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 3;
 }
 
-.whatis-venn-top-right .hero-link {
+.missing-venn-top-right .hero-link {
   top: 20%;
   right: 20%;
 }
 
-.whatis-venn-bottom-left {
+.missing-venn-bottom-left {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
 }
 
-.whatis-venn-bottom-left .hero-link {
+.missing-venn-bottom-left .hero-link {
   bottom: 20%;
   left: 20%;
 }
 
-.whatis-venn-bottom-right {
+.missing-venn-bottom-right {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 1;
 }
 
-.whatis-venn-bottom-right .hero-link {
+.missing-venn-bottom-right .hero-link {
   bottom: 20%;
   right: 20%;
 }

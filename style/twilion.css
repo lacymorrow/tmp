@@ -50,9 +50,11 @@
 .twilion-header .subtitle {
   font-size: 2vmax;
   margin-bottom: 2rem;
+  color: rgb(var(--twlo-black));
 }
 
 .twilion-header .description {
   font-size: 1.5vmax;
   line-height: 1.6;
+  color: rgb(var(--twlo-black));
 }

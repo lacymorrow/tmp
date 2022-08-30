@@ -1,6 +1,6 @@
 .section-values {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   grid-row-gap: 0px;
   grid-column-gap: 40px; 
@@ -9,6 +9,10 @@
   width: 90vw;
   min-height: max-content;
   margin: auto;
+}
+
+.value-left {
+  width: 90%;
 }
 
 .value-header {
@@ -68,10 +72,27 @@
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  counter-reset: section;
+  display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
   grid-gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   color: black;
+}
+
+.js-values-card {
+  width: 45%;
+  height: 400px;
+}
+
+.js-values-card:nth-child(2n+3) {
+  margin-top: 100px;
+}
+
+.js-values-card:nth-child(even) {
+  margin-top: 100px;
 }
 
 .card {
@@ -81,6 +102,15 @@
   padding: 1.5rem 2rem;
   border-radius: 8px;
   background-color: white;
+}
+
+.card::before {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  counter-increment: section;
+  content: "Principle #" counter(section) "";
+  color: rgb(var(--twlo-red));
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .title-card {
@@ -106,7 +136,6 @@
   font-size: 1.5vmax;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  white-space: nowrap
 }
 
 .card-subtitle {

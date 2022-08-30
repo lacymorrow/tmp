@@ -45,7 +45,7 @@ whatTimeline
 
 ScrollTrigger.create({
   id: "venn2",
-  trigger: ".section-whatis",
+  trigger: ".js-section-whatis",
   animation: whatTimeline,
   pin: false,
   scrub: 2,
@@ -55,7 +55,7 @@ var valuesSections = gsap.utils.toArray('.js-section-values')
 
 valuesSections.forEach(function (section, i) {
   const randomPosOrNegInteger = () => Math.ceil(Math.random() * 50) * (Math.round(Math.random()) ? 1 : -1);
-  gsap.fromTo(section.querySelectorAll(".js-values-card"), { 
+  gsap.timeline().fromTo(section.querySelectorAll(".js-values-card"), { 
     scale: 0.8, 
     autoAlpha: 0, 
     y: randomPosOrNegInteger,
@@ -90,7 +90,7 @@ valuesSections.forEach(function (section, i) {
 
 var twilionSections = gsap.utils.toArray('.js-section-twilion')
 twilionSections.forEach(function (section, i) {
-  gsap.fromTo(section.querySelectorAll(".js-twilion-header"), { 
+  gsap.timeline().fromTo(section.querySelectorAll(".js-twilion-header"), { 
     scale: 0.8, 
     autoAlpha: 0 
   }, {  
@@ -102,10 +102,10 @@ twilionSections.forEach(function (section, i) {
       // markers: true,
       id: `twilion-${i}`,
       trigger: section,
-      start: "top 10%",
-      end: () => `-=${section.offsetHeight}`,
+      start: "top 5%",
+      end: 'bottom 15%',
       onEnter: () => document.querySelector(".theme").className = "theme is-red",
-      onLeaveBack: () =>  document.querySelector(".theme").className = "theme",
+      onLeaveBack: () =>  document.querySelector(".theme").className = "theme is-dark",
       // pin: true,
     }
   })
@@ -115,6 +115,7 @@ const livingTimeline = gsap.timeline();
 const toggleBackgrounds = () => document.querySelectorAll(".has-image").forEach(el => el.classList.toggle("is-completed"))
 
 livingTimeline
+.set(".theme", { className: "theme"})
 .from(".atropos-magic-venn-top-left", { autoAlpha: 0, x: "-50px", y: "-50px", ease: "power3.out", duration: 4 })
 .from(".atropos-magic-venn-top-right", { autoAlpha: 0, x: "50px", y: "-50px", ease: "power3.out", duration: 4 })
 .from(".atropos-magic-venn-bottom-left", { autoAlpha: 0, x: "-50px", y: "50px", ease: "power3.out", duration: 4 })
