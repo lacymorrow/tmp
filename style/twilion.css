@@ -1,0 +1,58 @@
+.section-twilion {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px;
+  position: relative;
+  height: 100vh;
+}
+
+.twilion-image {
+  width: 100%;
+}
+
+.twilion-image-placeholder {
+  position: relative;
+  width: 70%;
+}
+
+.twilion-image-placeholder img {
+  height: 70%;
+  object-fit: cover;
+}
+
+.twilion-image-placeholder::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(var(--twlo-red), 0.2);
+  /* mix-blend-mode: multiply; */
+}
+
+.twilion-header {
+  max-width: 80%;
+  justify-self: flex-start;
+}
+
+.twilion-header .title {
+  color: rgb(var(--twlo-black));
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  font-size: 5.5vmax;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.twilion-header .title strong {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+}
+
+.twilion-header .subtitle {
+  font-size: 2vmax;
+  margin-bottom: 2rem;
+}
+
+.twilion-header .description {
+  font-size: 1.5vmax;
+  line-height: 1.6;
+}

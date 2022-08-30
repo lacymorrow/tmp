@@ -1,0 +1,120 @@
+.section-values {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 0px;
+  grid-column-gap: 40px; 
+  place-items: start;
+  place-content: start;
+  width: 90vw;
+  min-height: max-content;
+  margin: auto;
+}
+
+.value-header {
+  color: currentColor;
+}
+
+.value-title {
+  max-width: 10ch;
+  color: rgb(var(--twlo-red));
+  font-family: 'TwilioSansDisplay-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 6vmax;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.value-title strong {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+}
+
+.value-sub-title {
+  font-size: 1.2vmax;
+  line-height: 1.6;
+}
+
+.outbound-links {
+  font-size: 1.1vmax;
+  margin-top: 2rem;
+}
+
+.outbound-links-title {
+  margin-bottom: 1rem;
+}
+
+.outbound-links ul {
+  list-style-type: none;
+}
+
+.outbound-links li {
+  margin-bottom: 0.5rem;
+}
+
+.outbound-links li::after {
+  content: '↗︎';
+  color: currentColor;
+  margin-left: 0.5ch;
+  width: min-content;
+}
+
+.outbound-links a {
+  color: rgb(var(--twlo-red));
+  text-decoration: none;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.title-card {
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  color: white;
+  background-color: transparent;
+  background-color: rgb(var(--twlo-red));
+}
+
+.title-card .title {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  font-weight: 900;
+  font-size: 3vmax;
+  line-height: 1;
+  max-width: 10ch;
+}
+
+.card-title {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  font-size: 1.5vmax;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  white-space: nowrap
+}
+
+.card-subtitle {
+  font-size: 0.9vmax;
+  line-height: 1.6;
+}
+
+.card-link {
+  color: rgb(var(--twlo-red));
+  font-weight: 700;
+}
