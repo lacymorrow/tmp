@@ -7,7 +7,7 @@
   place-items: start;
   place-content: start;
   width: 90vw;
-  min-height: max-content;
+  min-height: 100vh;
   margin: auto;
 }
 
@@ -73,26 +73,10 @@
 
 .cards {
   counter-reset: section;
-  display: flex;
-  /* grid-template-columns: repeat(2, 1fr); */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
   color: black;
-}
-
-.js-values-card {
-  width: 45%;
-  height: 400px;
-}
-
-.js-values-card:nth-child(2n+3) {
-  margin-top: 100px;
-}
-
-.js-values-card:nth-child(even) {
-  margin-top: 100px;
 }
 
 .card {

@@ -5,7 +5,18 @@
 gsap.registerPlugin(ScrollTrigger);
 // ScrollTrigger.defaults({ markers: true });
 
-const heroTimeline = gsap.timeline();
+const heroTimeline = gsap.timeline({
+  scrollTrigger: {
+    id: "venn",
+    trigger: ".section-hero",
+    pin: true,
+    scrub: 2,
+  }
+});
+const isDark = () => document.querySelector("body").classList.toggle("is-dark")
+const isPink = () => document.querySelector("body").classList.toggle("is-pink")
+const isRed = () => document.querySelector("body").classList.toggle("is-red")
+const isBlue = () => document.querySelector("body").classList.toggle("is-blue")
 const isDottted = () => document.querySelector(".magic-venn-top-left").classList.toggle("is-dotted")
 const removeHover = () => document.querySelectorAll(".magic-venn-circle").forEach(el => el.classList.toggle("has-no-hover"))
 
@@ -14,21 +25,19 @@ heroTimeline
 .call(removeHover)
 .to(".magic-venn-bottom-right", { scale: 10, rotation: 50, autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
 .to(".magic-venn-bottom-left", { scale: 10, rotation: 70, autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
-.call(isDottted)
+// .call(isDottted)
 .to(".hero-link", { autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
 .to(".magic-venn-top-right", { scale: 10, rotation: 110, autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
 .to(".magic-venn-top-left", { scale: 10, rotation: 130, autoAlpha: 0.3, y: "50vh", ease: "back.in(0.5)", duration: 40 }, "-=15")
-.set(".theme", { className: "theme is-pink"}, "<")
+.set(".theme", { className: "theme is-dark"}, "<")
 
-ScrollTrigger.create({
-  id: "venn",
-  trigger: ".section-hero",
-  animation: heroTimeline,
+const whatTimeline = gsap.timeline({
+  scrollTrigger: {
+  id: "venn2",
+  trigger: ".js-section-whatis",
   pin: true,
   scrub: 2,
-});
-
-const whatTimeline = gsap.timeline();
+}});
 // const isDottted = () => document.querySelector(".magic-venn-top-left").classList.toggle("is-dotted")
 // const removeHover = () => document.querySelectorAll(".magic-venn-circle").forEach(el => el.classList.toggle("has-no-hover"))
 
@@ -41,15 +50,7 @@ whatTimeline
 // .to(".whatis-link", { autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
 // .to(".whatis-venn-top-right", { scale: 10, rotation: 110, autoAlpha: 0, ease: "back.in(0.5)", duration: 20 }, "-=15")
 // .to(".whatis-venn-top-left", { scale: 10, rotation: 130, autoAlpha: 0.3, y: "50vh", ease: "back.in(0.5)", duration: 40 }, "-=15")
-// .set(".theme", { className: "theme is-dark"}, "<")
-
-ScrollTrigger.create({
-  id: "venn2",
-  trigger: ".js-section-whatis",
-  animation: whatTimeline,
-  pin: false,
-  scrub: 2,
-});
+.set(".theme", { className: "theme is-dark"}, ">")
 
 var valuesSections = gsap.utils.toArray('.js-section-values')
 
@@ -102,14 +103,33 @@ twilionSections.forEach(function (section, i) {
       // markers: true,
       id: `twilion-${i}`,
       trigger: section,
-      start: "top 5%",
-      end: 'bottom 15%',
+      start: "top center",
+      end: 'top bottom',
       onEnter: () => document.querySelector(".theme").className = "theme is-red",
-      onLeaveBack: () =>  document.querySelector(".theme").className = "theme is-dark",
       // pin: true,
     }
   })
 });
+
+const missingTimeline = gsap.timeline({
+  scrollTrigger: {
+    id: "missing",
+    trigger: ".section-missing",
+    pin: true,
+    scrub: true,
+    start: "top top",
+    end: "bottom bottom",
+    onEnter: () => document.querySelector(".theme").className = "theme is-blue",
+    onEnterBack: () => document.querySelector(".theme").className = "theme is-dark",
+    onLeaveBack: () => document.querySelector(".theme").className = "theme is-blue",
+    onLeave: () => document.querySelector(".theme").className = "theme",
+  }
+});
+
+missingTimeline
+.from(".missing-left", { scale: 5, autoAlpha: 0, rotation: 80, x: "-50vw", y: "-50vh", ease: "back.in(0.5)", duration: 4 })
+.call(isBlue)
+
 
 const livingTimeline = gsap.timeline();
 const toggleBackgrounds = () => document.querySelectorAll(".has-image").forEach(el => el.classList.toggle("is-completed"))
@@ -130,12 +150,12 @@ ScrollTrigger.create({
   scrub: 1,
 });
 
-// ScrollTrigger.create({
-//   id: "menu-toggle",
-//   trigger: ".twilio-nav",
-//   end: "bottom 74px",
-//   toggleClass: { targets: ".js-menu-toggle", className: "is-pinned" },
-// });
+ScrollTrigger.create({
+  id: "menu-toggle",
+  trigger: ".twilio-nav",
+  end: "bottom 74px",
+  toggleClass: { targets: ".js-menu-toggle", className: "is-pinned" },
+});
 
 const ctasTimeline = gsap.timeline();
 ctasTimeline.from(".slide-up-reveal span", 10, {

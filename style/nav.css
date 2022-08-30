@@ -21,7 +21,7 @@
 .back-to-top {
   color: black;
   position: fixed;
-  bottom: 2rem;
+  top: 2rem;
   right: 2rem;
   z-index: 1000;
 }
@@ -43,7 +43,7 @@
 
 .menu-toggle {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   margin: 1.5rem 2rem;
   display: flex;
