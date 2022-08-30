@@ -49,6 +49,11 @@
   /* Negative text indent to optically left-align the capital T */
   /* text-indent: -1rem; */
 }
+
+.missing-question-title span {
+  color: rgb(var(--twlo-red));
+}
+
 /* ==================== */
 /* Magic Venn */
 /* ==================== */

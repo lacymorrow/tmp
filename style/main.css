@@ -26,12 +26,29 @@
   --twlo-black: 0, 0, 0;
   --twlo-red: 242, 47, 70;
   --twlo-red-10: 254, 236, 236;
+  --twlo-blue-10: 235, 244, 255;
   --twlo-blue-30: 153, 205, 255;
   --twlo-blue-60: 2, 99, 224;
   --twlo-blue-90: 3, 11, 93;
   --twlo-blue-100: 6, 3, 58;
   --twlo-blue-20: 204, 228, 255;
   --twlo-orange-10: 254, 245, 238;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 * {
@@ -104,6 +121,10 @@ section {
   transition: background-color 500ms, width 500ms;
 }
 
+.theme .right-text {
+  color: black;
+}
+
 .theme.is-pink .bg:before {
   background-color: rgb(var(--twlo-red-10));
 }
@@ -113,8 +134,11 @@ section {
 }
 
 .theme.is-dark .bg:before {
-  background-color: rgb(var(--twlo-blue-100));
-  
+  background-color: rgb(var(--twlo-blue-100)); 
+}
+
+.theme.is-dark .right-text {
+  color: black;
 }
 
 .theme.is-red {
@@ -137,6 +161,28 @@ section {
 
 .theme.is-blue .bg:after {
   background-color: rgb(var(--twlo-blue-100));
+  color: white;
+}
+
+.theme.is-blue .right-text {
+  color: white;
+}
+
+.theme.is-bluer {
+  color: black;
+}
+
+.theme.is-bluer .bg:before {
+  background-color: rgb(var(--twlo-blue-10));
+  color: black;
+}
+
+.theme.is-bluer .bg:after {
+  background-color: rgb(var(--twlo-blue-100));
+  color: white;
+}
+
+.theme.is-bluer .right-text {
   color: white;
 }
 

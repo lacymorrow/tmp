@@ -1,7 +1,7 @@
 .section-twilion {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 40px;
+  grid-column-gap: 0px 40px;
   grid-row-gap: 0px;
   position: relative;
   min-height: 100vh;
@@ -33,6 +33,7 @@
 .twilion-header {
   max-width: 80%;
   justify-self: flex-start;
+  padding: 20px;
 }
 
 .twilion-header .title {

@@ -88,7 +88,7 @@
   background-color: white;
 }
 
-.card::before {
+.card.has-cursor-effect::before {
   font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
   counter-increment: section;
   content: "Principle #" counter(section) "";
