@@ -230,10 +230,9 @@ missingTimeline
 .to(".js-missing-5", {autoAlpha: '0', ease: "back.in(0.5)"}, ">")
 .to(".js-missing-venn-5", {autoAlpha: '0', ease: "back.in(0.5)"}, "<")
 .to(".missing-venn-top-left", {autoAlpha: '1', ease: "back.in(0.5)"}, "<")
+.to(".missing-venn", {autoAlpha: 0, duration: 4000000}, "<")
 
-.to(".delay", {autoAlpha: 0, duration: 4000000})
-
-.set(".theme", { className: "theme is-light"}, ">")
+.set(".theme", { className: "theme is-light"}, "<")
 
 // ScrollTrigger.create({
 //     animation: missingTimeline,
