@@ -234,10 +234,6 @@ missingTimeline
 .to(".delay", {autoAlpha: 0, duration: 4000000})
 
 .set(".theme", { className: "theme is-light"}, ">")
-.to(".missing-venn-bottom-right", { scale: 10, rotation: 50, autoAlpha: 0, ease: "back.in(0.5)" })
-.to(".missing-venn-bottom-left", { scale: 10, rotation: 70, autoAlpha: 0, ease: "back.in(0.5)" })
-.to(".missing-venn-top-right", { scale: 10, rotation: 110, autoAlpha: 0, ease: "back.in(0.5)" })
-.to(".missing-venn-top-left", { scale: 10, rotation: 130, autoAlpha: 0, y: "50vh", ease: "back.in(0.5)" })
 
 // ScrollTrigger.create({
 //     animation: missingTimeline,
