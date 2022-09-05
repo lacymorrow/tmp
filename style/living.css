@@ -24,6 +24,7 @@
 .section-living .content p {
   font-size: 1.3vmax;
   max-width: 55ch;
+  margin: 0 auto;
 }
 
 .atropos-magic-venn {

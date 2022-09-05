@@ -14,7 +14,6 @@
   display: grid;
   place-items: center;
   animation: show 1s ease-in backwards;
-  --venn-size: 30vw;
 }
   
 .hero-left { 
@@ -55,8 +54,8 @@
 
 .magic-venn-circle {
   box-sizing: content-box;
-  width: calc(var(--venn-size) * 0.63);
-  height: calc(var(--venn-size) * 0.63);
+  width: calc(100% * 0.63);
+  height: calc(100% * 0.63);
   border-radius: 100%;
   border: 10px solid rgb(var(--twlo-red));
 }
@@ -81,12 +80,19 @@
   opacity: 0.25;
 }
 
-.hero-link {
+.hero-link,
+.hero-link-red {
   z-index: 2;
   color: inherit;
   text-align: center;
   font-size: calc(var(--venn-size) * 0.04);
   margin-top: 2rem;
+}
+
+.hero-link-red {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  color: rgb(var(--twlo-red));
+  letter-spacing: 1;
 }
 
 .magic-venn-circle .hero-link {

@@ -24,9 +24,19 @@
   <main>
     <section class="section-hero">
       <div class="hero-left">
-        <header class="header">
-          <h1 class="hero-title">Twilio Magic</h1>
-          <p class="hero-sub-title">Discover the values and principles that define who we are and guide how we work together.</p>
+        <header class="header relative">
+          <div class="js-hero-0">
+            <h1 class="hero-title">Twilio Magic</h1>
+            <p class="hero-sub-title">Discover the values and principles that define who we are and guide how we work together.</p>
+          </div>
+          <div class="absolute js-hero-1">
+            <h2 class="whatis-title">What is the<br />Twilio Magic?</h2>
+            <p class="value-sub-title">It’s the essence of what makes Twilio, “Twilio.” <strong>It’s a system that defines who we are</strong>, what we stand for, and guides how we work together.</p>
+            <br />
+            <p class="value-sub-title">The Magic is made up of <strong>4 values</strong>. These things never change. No matter our scale, structure, or strategies, these are who we are at our core. We also have <strong>principles</strong> that support these values. They’re lessons and tools we rely on, growing and evolving as we do, that help us truly embrace and live our values.</p>
+            <br />
+            <p class="value-sub-title"><a class="hero-link-red" target="_blank" href="https://switchboard.twilio.com/sites/all-about-us/SitePageModern/13749/twilio-magic-2-0">Read more on Twilio Magic 2.0 on Switchboard</a></p>
+          </div>
         </header>
       </div>
       <div class="hero-right">
@@ -40,33 +50,11 @@
       </div>
     </section>
 
-    <!-- <section class="section-whatis js-section-whatis">
-      <div class="whatis-left">
-        <header class="whatis-header">
-          <h2 class="whatis-title">What is the<br />Twilio Magic?</h2>
-          <p class="value-sub-title">It’s the essence of what makes Twilio, “Twilio.” <strong>It’s a system that defines who we are</strong>, what we stand for, and guides how we work together.</p>
-          <p class="value-sub-title">The Magic is made up of <strong>4 values</strong>. These things never change. No matter our scale, structure, or strategies, these are who we are at our core. We also have <strong>principles</strong> that support these values. They’re lessons and tools we rely on, growing and evolving as we do, that help us truly embrace and live our values.</p>
-          <p class="value-sub-title"><a target="_blank" href="https://switchboard.twilio.com/sites/all-about-us/SitePageModern/13749/twilio-magic-2-0"></a>Read more on Twilio Magic 2.0 on Switchboard</p>
-        </header>
-      </div>
-      <div class="whatis-right">
-        <div class="whatis-venn">
-          <div class="whatis-venn-circle whatis-venn-top-left"><a class="hero-link has-cursor-effect" href="#builders">We are <strong>Builders</strong></a></div>
-          <div class="whatis-venn-circle whatis-venn-top-right"><a class="hero-link has-cursor-effect" href="#owners">We are <strong>Owners</strong></a></div>
-          <div class="whatis-venn-circle whatis-venn-bottom-left"><a class="hero-link has-cursor-effect" href="#curious">We are <strong>Curious</strong></a></div>
-          <div class="whatis-venn-circle whatis-venn-bottom-right"><a class="hero-link has-cursor-effect" href="#positrons">We are <strong>Positrons</strong></a></div>
-        </div>
-        <a class="whatis-link has-cursor-effect" href="#living">Living the <strong>Magic</strong></a>
-      </div>
-    </section> -->
-
     <!-- We are Builders -->
 
-    <div class="divider"></div>
-
-    <section class="section-values js-section-values" id="builders">
+    <section class="section-values js-section-builders" id="builders">
       <div class="value-left">
-        <header class="value-header">
+        <header class="value-header js-header-builders">
           <h2 class="value-title">We are <strong>Builders</strong></h2>
           <p class="value-sub-title">We love hard problems and believe in the indomitable power of people's ability to create a better world through ingenuity and resourcefulness. We reject the “can’t be done” attitude and believe bold ideas and fearless iteration can resolve the most challenging problems for our customers and the world they operate in.</p>
           <div class="outbound-links">
@@ -81,15 +69,23 @@
         </header>
       </div>
       <div class="value-right">
+        <img class="value-venn-image js-twilion-venn" width="85" height="85" src="./images/venn-red-1.svg" alt="">
+
+        <!-- <div class="value-venn">
+          <div class="value-venn-circle value-venn-top-left"></div>
+          <div class="value-venn-circle value-venn-top-right"></div>
+          <div class="value-venn-circle value-venn-bottom-left"></div>
+          <div class="value-venn-circle value-venn-bottom-right"></div>
+        </div> -->
         <div class="js-values-venn">
-          <h3 class="title">Tools to act as a Builder</h3>
+          <h3 class="value-card-header">Tools to act as a Builder</h3>
         </div>
         <div class="cards">
-          <div class="js-values-card">
+          <!-- <div class="js-values-card">
             <div class="card title-card">
               <h3 class="title">Tools to operate as a Builder</h3>
             </div>
-          </div>
+          </div> -->
           <div class="atropos js-values-card atropos-small-card-1">
             <div class="atropos-scale">
               <div class="atropos-rotate">
@@ -161,12 +157,14 @@
     <div class="divider"></div>
   
     <section class="section-twilion js-section-twilion">
-      <img class="twilion-image" src="./images/image-4.jpg" alt="">
-      <header class="twilion-header js-twilion-header">
-        
-        <h1 class="title">The <strong>Twilio Magic</strong> in action</h1>
-        <p class="subtitle"><strong>Devon Developer</strong>, Software Engineer</p>
-        <p class="description">Devon Developer, a software engineer with the Web team, lives the Twilio Magic by<strong> wearing the customers’ shoes</strong>. When requests come in for fixes or updates, Devon always takes the time to consider how her changes can affect our customers’ and users’ experience on the website. She wears the customers’ shoes by making sure everything she and her team works on is done for the customers’ benefit.</p>
+      <img class="twilion-image" src="./images/image-1.jpg" alt="">
+      <header class="twilion-header">
+        <img class="venn-image js-twilion-venn" width="85" height="85" src="./images/venn-white-1.svg" alt="">
+        <div class="js-twilion-header">
+          <h1 class="title">The <strong>Twilio Magic</strong> in action</h1>
+          <p class="subtitle"><strong>Devon Developer</strong>, Software Engineer</p>
+          <p class="description">Devon Developer, a software engineer with the Web team, lives the Twilio Magic by<strong> wearing the customers’ shoes</strong>. When requests come in for fixes or updates, Devon always takes the time to consider how her changes can affect our customers’ and users’ experience on the website. She wears the customers’ shoes by making sure everything she and her team works on is done for the customers’ benefit.</p>
+        </div>
       </header>
     </section>
     
@@ -189,13 +187,13 @@
         </header>
       </div>
       <div class="value-right">
+        <img class="value-venn-image js-twilion-venn" width="85" height="85" src="./images/venn-red-2.svg" alt="">
+
+        <div class="js-values-venn">
+          <h3 class="value-card-header">Tools to operate as an Owner</h3>
+        </div>
         <div class="cards">
-          <div class="js-values-card">
-            <div class="card title-card">
-              <h3 class="title">Tools to operate as an Owner</h3>
-            </div>
-          </div>
-          <div class="atropos js-values-card atropos-small-card-11">
+          <div class="atropos js-values-card atropos-small-card-6">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -208,7 +206,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
           
-          <div class="atropos js-values-card atropos-small-card-12">
+          <div class="atropos js-values-card atropos-small-card-7">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -221,7 +219,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-13">
+          <div class="atropos js-values-card atropos-small-card-8">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -234,7 +232,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-14">
+          <div class="atropos js-values-card atropos-small-card-9">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -247,7 +245,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-10">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -260,7 +258,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-11">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -273,7 +271,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-12">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -292,11 +290,10 @@
     <!-- <div class="divider"></div>
 
     <section class="section-twilion js-section-twilion">
-      <div class="twilion-image-placeholder">
-        <img class="twilion-image" src="./images/image-2.jpg" alt="">
-      </div>
+      <img class="twilion-image" src="./images/image-2.jpg" alt="">
       <header class="twilion-header js-twilion-header">
-        <h1 class="title">The Twilio Magic in action</h1>
+        <img class="venn-image" width="85" height="85" src="./images/venn-white-2.svg" alt="">
+        <h1 class="title">The <strong>Twilio Magic</strong> in action</h1>
         <p class="subtitle"><strong>Devon Developer</strong>, Software Engineer</p>
         <p class="description">Devon Developer, a software engineer with the Web team, lives the Twilio Magic by<strong> wearing the customers’ shoes</strong>. When requests come in for fixes or updates, Devon always takes the time to consider how her changes can affect our customers’ and users’ experience on the website. She wears the customers’ shoes by making sure everything she and her team works on is done for the customers’ benefit.</p>
       </header>
@@ -323,13 +320,13 @@
         </header>
       </div>
       <div class="value-right">
+        <img class="value-venn-image js-twilion-venn" width="85" height="85" src="./images/venn-red-3.svg" alt="">
+
+        <div class="js-values-venn">
+          <h3 class="value-card-header">Tools to stay relentlessly Curious</h3>
+        </div>
         <div class="cards">
-          <div class="js-values-card">
-            <div class="card title-card">
-              <h3 class="title">Tools to stay relentlessly Curious</h3>
-            </div>
-          </div>
-          <div class="atropos js-values-card atropos-small-card-11">
+          <div class="atropos js-values-card atropos-small-card-13">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -342,7 +339,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
           
-          <div class="atropos js-values-card atropos-small-card-12">
+          <div class="atropos js-values-card atropos-small-card-14">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -355,7 +352,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-13">
+          <div class="atropos js-values-card atropos-small-card-15">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -368,7 +365,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-14">
+          <div class="atropos js-values-card atropos-small-card-16">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -381,7 +378,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-17">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -400,11 +397,10 @@
     <!-- <div class="divider"></div>
 
     <section class="section-twilion js-section-twilion">
-      <div class="twilion-image-placeholder">
-        <img class="twilion-image" src="./images/image-3.jpg" alt="">
-      </div>
+      <img class="twilion-image" src="./images/image-3.jpg" alt="">
       <header class="twilion-header js-twilion-header">
-        <h1 class="title">The Twilio Magic in action</h1>
+        <img class="venn-image" width="85" height="85" src="./images/venn-white-3.svg" alt="">
+        <h1 class="title">The <strong>Twilio Magic</strong> in action</h1>
         <p class="subtitle"><strong>Devon Developer</strong>, Software Engineer</p>
         <p class="description">Devon Developer, a software engineer with the Web team, lives the Twilio Magic by<strong> wearing the customers’ shoes</strong>. When requests come in for fixes or updates, Devon always takes the time to consider how her changes can affect our customers’ and users’ experience on the website. She wears the customers’ shoes by making sure everything she and her team works on is done for the customers’ benefit.</p>
       </header>
@@ -431,13 +427,13 @@
         </header>
       </div>
       <div class="value-right">
+        <img class="value-venn-image js-twilion-venn" width="85" height="85" src="./images/venn-red-4.svg" alt="">
+
+        <div class="js-values-venn">
+          <h3 class="value-card-header">Tools to be a Positron</h3>
+        </div>
         <div class="cards">
-          <div class="js-values-card">
-            <div class="card title-card">
-              <h3 class="title">Tools to be a Positron</h3>
-            </div>
-          </div>
-          <div class="atropos js-values-card atropos-small-card-11">
+          <div class="atropos js-values-card atropos-small-card-18">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -450,7 +446,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
           
-          <div class="atropos js-values-card atropos-small-card-12">
+          <div class="atropos js-values-card atropos-small-card-19">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -463,7 +459,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-13">
+          <div class="atropos js-values-card atropos-small-card-20">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -476,7 +472,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-14">
+          <div class="atropos js-values-card atropos-small-card-21">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -489,7 +485,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
     
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-22">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -502,7 +498,7 @@
             </div> <!-- atropos-scale (required) -->
           </div> <!-- atropos (required)-->
 
-          <div class="atropos js-values-card atropos-small-card-15">
+          <div class="atropos js-values-card atropos-small-card-23">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner">
@@ -518,16 +514,19 @@
       </div>  
     </section>
 
-    <!-- <section class="section-twilion js-section-twilion">
-      <div class="twilion-image-placeholder">
-        <img class="twilion-image" src="./images/image-4.jpg" alt="">
-      </div>
+    <!-- <div class="divider"></div>
+
+    <section class="section-twilion js-section-twilion">
+      <img class="twilion-image" src="./images/image-4.jpg" alt="">
       <header class="twilion-header js-twilion-header">
-        <h1 class="title">The Twilio Magic in action</h1>
+        <img class="venn-image" width="85" height="85" src="./images/venn-white-4.svg" alt="">
+        <h1 class="title">The <strong>Twilio Magic</strong> in action</h1>
         <p class="subtitle"><strong>Devon Developer</strong>, Software Engineer</p>
         <p class="description">Devon Developer, a software engineer with the Web team, lives the Twilio Magic by<strong> wearing the customers’ shoes</strong>. When requests come in for fixes or updates, Devon always takes the time to consider how her changes can affect our customers’ and users’ experience on the website. She wears the customers’ shoes by making sure everything she and her team works on is done for the customers’ benefit.</p>
       </header>
     </section> -->
+
+    <div class="divider"></div>
 
     <!-- Living the Magic  -->
 
@@ -575,6 +574,14 @@
           <div class="missing-venn-circle missing-venn-top-right"><a class="missing-link has-cursor-effect" href="#owners">We are <strong>Owners</strong></a></div>
           <div class="missing-venn-circle missing-venn-bottom-left"><a class="missing-link has-cursor-effect" href="#curious">We are <strong>Curious</strong></a></div>
           <div class="missing-venn-circle missing-venn-bottom-right"><a class="missing-link has-cursor-effect" href="#positrons">We are <strong>Positrons</strong></a></div>
+          <div class="missing-venn-parts">
+            <img class="missing-venn-image js-missing-venn-0" src="./images/venn-combination.svg" alt="">
+            <img class="missing-venn-image js-missing-venn-1" src="./images/venn-parts.svg" alt="">
+            <img class="missing-venn-image js-missing-venn-2" src="./images/venn-parts-1.svg" alt="">
+            <img class="missing-venn-image js-missing-venn-3" src="./images/venn-parts-2.svg" alt="">
+            <img class="missing-venn-image js-missing-venn-4" src="./images/venn-parts-3.svg" alt="">
+            <img class="missing-venn-image js-missing-venn-5" src="./images/venn-parts-4.svg" alt="">
+          </div>
         </div>
       </div>
     </section>
@@ -624,7 +631,7 @@
     </div>
   </section>
 
-  <nav class="nav js-nav" role="navigation">
+  <!-- <nav class="nav js-nav" role="navigation">
     <button class="menu-toggle js-menu-toggle has-cursor-effect" type="button" title="Menu">
       <div class="nav-link" href="#">Menu</div>
       <svg class="navicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
@@ -650,26 +657,27 @@
         <li class="menu-item"><a class="menu-link js-menu-link has-cursor-effect" href="#positrons" data-hover="We are Positrons">We are Positrons</a></li>
       </ul>
     </nav>
-  </nav>
+  </nav> -->
 
-  <a aria-label="Back to top" href="#top" class="back-to-top has-cursor-effect" title="Back to top"><img src="./images/back-to-top.svg" /></a>
+  <a aria-label="Back to top" href="#top" class="back-to-top has-cursor-effect" title="Back to top"><img src="./images/back-to-top.svg" alt="" /></a>
 
-  <div class="cursor">
+  <!-- <div class="cursor">
     <div class="cursor-inner">
       <div class="cursor-shape"></div>
     </div>
-  </div>
+  </div> -->
   
   <div class="bg"></div>
+  <div class="delay"></div>
+
+  <script src="./scripts/vendor/gsap.min.js"></script>
+  <script src="./scripts/vendor/scrolltrigger.min.js"></script>
+  <script src="./scripts/vendor/atropos.min.js"></script>
   
-    <script src="./scripts/vendor/gsap.min.js"></script>
-    <script src="./scripts/vendor/scrolltrigger.min.js"></script>
-    <script src="./scripts/vendor/atropos.min.js"></script>
-    
-    <script src="./scripts/gsap.js"></script>
-    <script src="./scripts/cursor.js"></script>
-    <script src="./scripts/atropos.js"></script>
-    <script src="./scripts/nav.js"></script>
+  <script src="./scripts/gsap.js"></script>
+  <!-- <script src="./scripts/cursor.js"></script> -->
+  <script src="./scripts/atropos.js"></script>
+  <!-- <script src="./scripts/nav.js"></script> -->
 </body>
 
 </html>

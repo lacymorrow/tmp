@@ -13,10 +13,15 @@
 
 .value-left {
   width: 90%;
+  position: sticky;
+  top: 25px;
 }
 
-.value-header {
-  color: currentColor;
+.value-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .value-title {
@@ -36,6 +41,17 @@
 .value-sub-title {
   font-size: 1.2vmax;
   line-height: 1.6;
+}
+
+.value-card-header {
+  font-family: 'TwilioSansDisplay-Extrabold', sans-serif;
+  font-size: 2vmax;
+  max-width: 50ch;
+  line-height: 1.6;
+  color: rgb(var(--twlo-red));
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .outbound-links {
@@ -72,12 +88,25 @@
 }
 
 .cards {
+  display: flex;
+  flex-wrap: wrap;
+
+
   counter-reset: section;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   color: black;
 }
+
+/* .cards > div {
+  flex: 0 0 45%;
+  min-height: 5em;
+}
+
+.cards > div:nth-of-type(2n) {
+  margin-top: 50px;
+} */
 
 .card {
   display: flex;
@@ -130,4 +159,62 @@
 .card-link {
   color: rgb(var(--twlo-red));
   font-weight: 700;
+}
+
+.value-venn {
+  width: calc(0.3*var(--venn-size));
+  height: calc(0.3*var(--venn-size));
+  position: relative;
+  position: sticky;
+}
+
+.value-venn-circle {
+  box-sizing: content-box;
+  width: calc(100% * 0.63);
+  height: calc(100% * 0.63);
+  border-radius: 100%;
+  border: 10px solid rgb(var(--twlo-red));
+}
+
+.value-venn-circle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: radial-gradient(rgb(var(--twlo-red)) 30%, transparent 30%);
+  background-position: 6px 6px;
+  background-size: 16px 16px;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.value-venn-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.value-venn-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.value-venn-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.value-venn-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }

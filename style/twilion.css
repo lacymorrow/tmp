@@ -30,6 +30,10 @@
   /* mix-blend-mode: multiply; */
 }
 
+.venn-image {
+  margin-bottom: 60px;
+}
+
 .twilion-header {
   max-width: 80%;
   justify-self: flex-start;
