@@ -47,8 +47,8 @@
   }
 
   .magic-venn {
-    width: 320px !important;
-    height: 320px !important;
+    width: 300px !important;
+    height: 300px !important;
     margin-top: 50px;
   }
   .magic-venn .magic-venn-circle {
@@ -492,6 +492,30 @@ section {
   margin-top: auto;
 }
 
+.section-living {
+  background-color: #FEF5EE;
+}
+
+.has-image::after {
+  opacity: var(--opacity);
+  transition: none;
+}
+
+@media only screen and (min-width: 992.98px) {
+  .responsive-circle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .responsive-circle {
+    display: block;
+    padding-top: 50px;
+    background-color: #FEF5EE;
+  }
+  .responsive-circle .magic-venn {
+    margin-top: 0;
+  }
+}
 /* ==================== */
 /* Magic Venn */
 /* ==================== */

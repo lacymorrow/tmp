@@ -95,3 +95,25 @@
 	max-width: 100%;
 	margin-top: auto;
 }
+.section-living{
+	background-color:#FEF5EE; 
+}
+.has-image::after { 
+	opacity: var(--opacity);
+	transition: none; 
+}
+	@media #{$min_lg}{
+		.responsive-circle{
+			display: none;
+		}
+	}
+	@media #{$lg_device}{
+		.responsive-circle{
+			display: block;
+			padding-top: 50px;
+			background-color: #FEF5EE;
+			.magic-venn{
+				margin-top: 0;
+			}
+		}
+	}

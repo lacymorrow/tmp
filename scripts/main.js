@@ -298,6 +298,9 @@ function firstMagicScreen(){
 					.set(aniRightUserInfo, {
 						"display":"block"
 					})
+					.set(aniCardsWrapper, { 
+						autoAlpha:1,
+					})
 					.to(aniCardsWrapper, {
 						height:0,
 						autoAlpha:0,
@@ -489,11 +492,84 @@ ScrollTrigger.create({
   animation: livingTimeline,
   pin: true,
   scrub: 1,
-  // onEnter: () => document.querySelector(".theme").className = "theme is-blue",
-  // onEnterBack: () => document.querySelector(".theme").className = "theme is-bluer",
-  // onLeave: () => document.querySelector(".theme").className = "theme is-light",
-  // onLeaveBack: () => document.querySelector(".theme").className = "theme is-dark",
+  // markers:true,
+  start:"top top",
+  end:"bottom +=300",
+  onLeave: () => {
+  	magicImageToTextTl.play()
+  },
+  onLeaveBack: () => { 
+	setTimeout(function(){
+		magicImageToTextTl.reverse()
+	}, 120);
+  },
+
 });
+
+gsap.set(".section-living .atropos-magic-venn-circle", {
+	"--opacity":1
+})
+
+let magicImageToTextTl = gsap.timeline({paused:true})
+magicImageToTextTl
+.to(".section-living .atropos-magic-venn-top-left", { 
+	yPercent:50,
+	xPercent:50,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-top-right", {
+	yPercent:50,
+	xPercent:-50,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-bottom-left", { 
+	yPercent:-50,
+	xPercent:50,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-bottom-right", {  
+	yPercent:-50,
+	xPercent:-50,
+	duration:0.4,
+	ease:"back.out(0.6)"
+}, "<")
+.to(".section-living .atropos-inner", {
+	rotation:360,
+	ease:"back.out(0.6)"
+}, "<")
+.to(".section-living .atropos-magic-venn-circle", {
+	"--opacity":0,
+}, "<")
+.to(".section-living .atropos-magic-venn-top-left", { 
+	yPercent:0,
+	xPercent:0,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-top-right", {
+	yPercent:0,
+	xPercent:0,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-bottom-left", { 
+	yPercent:0,
+	xPercent:0,
+	duration:0.4,
+	ease:"back.out(0.6)"
+ }, "<")
+.to(".section-living .atropos-magic-venn-bottom-right", {  
+	yPercent:0,
+	xPercent:0,
+	duration:0.4,
+	ease:"back.out(0.6)"
+}, "<")
+.set(".section-living .atropos-inner", {
+	rotation:0
+}, "<")
 
 
 const ctasTimeline = gsap.timeline();
