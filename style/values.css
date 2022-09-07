@@ -50,8 +50,8 @@
   line-height: 1.6;
   color: rgb(var(--twlo-red));
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+margin-top: 1rem;
+margin-bottom: 2rem;
 }
 
 .outbound-links {
@@ -97,7 +97,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   color: black;
-}
+  margin-bottom: 45px;
+} 
 
 /* .cards > div {
   flex: 0 0 45%;
